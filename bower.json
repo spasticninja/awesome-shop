@@ -1,0 +1,20 @@
+{
+  "name": "awesome-shop",
+  "version": "0.0.0",
+  "authors": [
+    "Allison Betancourt <allisonbbetancourt@gmail.com>"
+  ],
+  "description": "An frontend angular shop project",
+  "main": "index.html",
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
