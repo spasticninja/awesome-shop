@@ -1,0 +1,30 @@
+<div class="container" id="content">
+  <h1>Store</h1>
+  <ul class="page">
+    <li ng-repeat="item in inventory | offset: currentPage*itemsPerPage | limitTo: itemsPerPage">
+      <h2>{{inventory.name}}</h2>
+      {{inventory.shortDes}}
+      <!--<img ng-src="{{inventory.img[0]}}" alt="{{inventory.name}}" class="text-center" style="width:auto;">-->
+    </li>
+  </ul>
+
+  <!--pagination buttons -->
+  <ul class="pagination">
+    <li ng-class="prevPageDisabled()">
+      <a href ng-click="firstPage()"><i class="fa fa-angle-double-left"></i> First</a>
+    </li>
+    <li ng-class="prevPageDisabled()">
+      <a href ng-click="prevPage()"><i class="fa fa-angle-left"></i> Prev</a>
+    </li>
+    <li ng-repeat="n in range()" ng-class="{active: n == currentPage}" ng-click="setPage(n)">
+      <a href>{{n+1}}</a>
+    </li>
+    <li ng-class="nextPageDisabled()">
+      <a href ng-click="nextPage()">Next <i class="fa fa-angle-right"></i></a>
+    </li>
+    <li ng-class="nextPageDisabled()">
+      <a href ng-click="lastPage()">Last <i class="fa fa-angle-double-right"></i></a>
+    </li>
+  </ul>
+
+</div>
