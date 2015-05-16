@@ -1,7 +1,10 @@
 'use strict';
 
-angular.module('awesome-shop', ['ngRoute']).config(['$routeProvider', function($routeProvider){
+var myApp = angular.module('awesome-shop',['ngRoute']);
+
+myApp.config(['$routeProvider', function($routeProvider){
   $routeProvider.when('/', {
-    templateUrl: 'views/home.html'
+    templateUrl: 'views/home.html', //homepage
+    //controller: 'homeCtrl'
   });
 }]);

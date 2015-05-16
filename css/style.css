@@ -1,0 +1,33 @@
+body,html{
+  /* Background pattern from subtlepatterns.com */
+  background-image: url('/images/wavegrid/wavegrid.png');
+  background-repeat: repeat;
+  font-family: 'Lato', sans-serif;
+}
+h1,h2,h3,h4,h5{
+  font-family: 'Oswald', sans-serif;
+  color:#2F637A;
+}
+
+/************ Navbar ***************/
+.navbar{
+  background-color:#fff;
+}
+.fa.fa-shopping-cart{
+  font-size:2em;
+}
+.navbar-nav>li>a, .navbar-brand, .navbar-right>li>a{
+  color:#2F637A;
+}
+.navbar-nav>li>a:hover, .navbar-brand:hover, .navbar-right>li>a:hover{
+  color:#4CA1C6;
+  background-color:#fff;
+}
+.icon-bar{
+  background-color:#2F637A;
+  border-color:#2F637A;
+}
+.navbar-toggle{
+  border-color:#2F637A;
+  border-radius:0px;
+}
