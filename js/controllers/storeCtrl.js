@@ -1,4 +1,4 @@
-angular.module('awesome-shop',[])
+angular.module('awesome-shop')
 .filter('offset', function(){
   return function(input,start){
     start = parseInt(start,10);
