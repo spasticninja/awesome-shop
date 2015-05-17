@@ -12,7 +12,7 @@
           <h2>{{item.name}}</h2>
           <p>{{item.shortDes}}</p>
           <a href="/product/{{item.id}}" class="btn btn-default">Read more</a>
-          <a href class="btn btn-default">Add to cart</a>
+          <a href class="btn btn-default" ng-click="cart.addItem(item,1)">Add to cart</a>
         </div>
       </div>
     </li>
@@ -27,9 +27,7 @@
       <li ng-class="prevPageDisabled()">
         <a href ng-click="prevPage()"><i class="fa fa-angle-left"></i> Prev</a>
       </li>
-      <li ng-repeat="n in range()" ng-class="{active: n == currentPage}" ng-click="setPage(n)">
-        <a href>{{n+1}}</a>
-      </li>
+
       <li ng-class="nextPageDisabled()">
         <a href ng-click="nextPage()">Next <i class="fa fa-angle-right"></i></a>
       </li>

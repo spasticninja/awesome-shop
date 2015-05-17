@@ -5,9 +5,9 @@ angular.module('awesome-shop')
     return input.slice(start);
   };
 })
-.controller('storeCtrl', ['$scope', 'inventory', function($scope, inventory){
-  console.log(inventory);
+.controller('storeCtrl', ['$scope', 'inventory', 'shoppingCart', function($scope, inventory, shoppingCart){
   $scope.inventory = inventory;
+  $scope.cart = shoppingCart;
   $scope.currentPage = 0;
   $scope.itemsPerPage = 10; //number of listings per page.
 

@@ -12,8 +12,8 @@ angular.module('awesome-shop', ['ngRoute'])
   }).when('/product/:productID', {
     templateUrl: 'views/product.html'
   }).when('/cart', {
-    templateUrl: 'views/cart.html'/*,
-    controller: 'cartCtrl'*/
+    templateUrl: 'views/cart.html',
+    controller: 'cartCtrl'
   }).otherwise({
     redirectTo: '/'
   });
