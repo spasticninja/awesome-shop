@@ -15,7 +15,7 @@ angular.module('awesome-shop').service('shoppingCart', [function(){
 
   this.total = function(){
     for(var i = 0; i < this.items.length ; i++){
-      this.itemTotal += this.items[i].price * this.items[i].quantity;
+      this.itemTotal += this.items[i].quantity;
     }
     console.log('cart total: ' + this.itemTotal);
   }

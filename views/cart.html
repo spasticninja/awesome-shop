@@ -10,7 +10,7 @@
       <th></th>
     </tr>
   </thead>
-  <tr ng-hide="cart.items > 0">
+  <tr ng-hide="cart.items.length">
     <th colspan="5" class="text-center">Your shopping cart is empty. <a href="#/store">Shop now!</a></th>
   </tr>
   <tr ng-repeat="item in cart.items">
@@ -20,11 +20,11 @@
     <th>{{item.quantity * item.price | currency}}</th></th>
     <th>[<a href ng:click="removeItem($index)">X</a>]</th>
   </tr>
-  <tr>
+  <tr ng-show="cart.items.length">
     <th></th>
     <th></th>
     <th>Total:</th>
-    <th>{{cart.total() | currency}}</th>
+    <th>{{cartTotal() | currency}}</th>
     <th></th>
   </tr>
 </table>
