@@ -1,3 +1,3 @@
-angular.module('awesome-shop').controller('homeCtrl', ['inventory', '$scope', function($scope, inventory){
+angular.module('awesome-shop').controller('homeCtrl', ['$scope', 'inventory', function($scope, inventory){
   console.log(inventory);
 }]);

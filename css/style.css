@@ -31,3 +31,9 @@ h1,h2,h3,h4,h5{
   border-color:#2F637A;
   border-radius:0px;
 }
+
+/************* Store View *************/
+.list-view{
+  list-style-type: none;
+  padding-left:0px;
+}

@@ -6,6 +6,8 @@ angular.module('awesome-shop')
   };
 })
 .controller('storeCtrl', ['$scope', 'inventory', function($scope, inventory){
+  console.log(inventory);
+  $scope.inventory = inventory;
   $scope.currentPage = 0;
   $scope.itemsPerPage = 10; //number of listings per page.
 
@@ -39,7 +41,7 @@ angular.module('awesome-shop')
     return $scope.currentPage === 0 ? "disabled":" ";
   };
   $scope.pageCount = function(){
-    return Math.ceil($scope.comicList.length/$scope.itemsPerPage)-1;
+    return Math.ceil($scope.inventory.length / $scope.itemsPerPage)-1;
   };
   $scope.nextPage = function(){
     if($scope.currentPage < $scope.pageCount()){

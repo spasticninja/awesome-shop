@@ -1,4 +1,4 @@
-angular.module('awesome-shop').constant('inventory', {
+angular.module('awesome-shop').constant('inventory', [{
   id: 0001001,
   item: 'Teeshirt',
   type: 'Unisex',
@@ -142,4 +142,4 @@ angular.module('awesome-shop').constant('inventory', {
   shortDes: '<p>The Marauder\'s Map is a thing of beauty. And now, just so you never forget, you can wear a shirt with the phrase needed to reveal its secrets.</p>',
   longDes: '<p>This shirt is not the Marauder\'s Map. This shirt does not have a Homonculous Charm cast on it. This shirt is only a reminder of what to say to get the Marauder\'s Map to show off its magical bounty. And if you\'re like us, each time you put the shirt on, you\'ll tap it with your wand and say, "I solemnly swear that I am up to no good." And then, when you take it off, you\'ll whisper, "Mischief managed."</p> <p>Please Note: We\'re not sure how this shirt will react in the presence of Severus Snape. You have been warned.</p> <p>"I solemnly swear that I am up to no good" and "Harry Potter" on a black, 100% cotton, ladies\' v-neck shirt. Shirt also features white stripes on the sleeve and a white, ringer-style neck hole. Machine wash cold. Tumble dry low or lay flat to dry. Imported.</p>',
   price: 14.99
-});
+}]);
