@@ -1,6 +1,6 @@
 angular.module('awesome-shop').service('shoppingCart', [function(){
   this.items = [];
-  this.itemTotal = 0;
+  this.newCart = [];
 
   this.addItem = function(item, amt){
     console.log('adding item to cart', item, this.items);
@@ -13,15 +13,21 @@ angular.module('awesome-shop').service('shoppingCart', [function(){
     console.log(this.items);
   }
 
-  this.total = function(){
-    for(var i = 0; i < this.items.length ; i++){
-      this.itemTotal += this.items[i].quantity;
-    }
-    console.log('cart total: ' + this.itemTotal);
+  this.cartTotal = function(){
+    var tot = 0;
+    angular.forEach(this.items, function(val){
+      tot += val.price * val.quantity;
+    });
+
+    return tot;
   }
 
   this.removeItem = function(index) {
     this.items.splice(index, 1);
+  }
+
+  this.emptyCart = function(){
+    this.items = this.newCart;
   }
 
 }]);
