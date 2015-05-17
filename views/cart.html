@@ -18,7 +18,7 @@
     <th><input type="number" ng-model="item.quantity" ng-required class="input-mini"></th>
     <th>{{item.price}}
     <th>{{item.quantity * item.price | currency}}</th></th>
-    <th>[<a href ng-click="cart.removeItem($index)">X</a>]</th>
+    <th><a href ng-click="cart.removeItem($index)">Remove Item</a></th>
   </tr>
   <tr ng-show="cart.items.length">
     <th></th>

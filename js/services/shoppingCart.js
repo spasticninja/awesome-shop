@@ -1,16 +1,31 @@
 angular.module('awesome-shop').service('shoppingCart', [function(){
-  this.items = [];
+  this.items =[];
   this.newCart = [];
 
   this.addItem = function(item, amt){
     console.log('adding item to cart', item, this.items);
-    this.items.push({
-      id: item.id,
-      name: item.name,
-      quantity: amt,
-      price: item.price
+    var itemExists = false;
+    var key = 0;
+
+    angular.forEach(this.items,function(it, index){
+      if(it.id == item.id){
+        itemExists = true;
+      }else{
+        key = index;
+        console.log(key)
+      }
     });
-    console.log(this.items);
+
+    if(itemExists){
+      this.items[key].quantity += amt;
+    } else{
+      this.items.push({
+        id: item.id,
+        name: item.name,
+        quantity: amt,
+        price: item.price
+      });
+    }
   }
 
   this.cartTotal = function(){
