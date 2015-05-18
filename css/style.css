@@ -94,6 +94,12 @@ a:hover{
   -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
+/********** Product Page ************/
+.product-img{
+  max-height:250px;
+  margin:auto;
+}
+
 /********** Footer ************/
 .footer{
   background-color:#2F637A;

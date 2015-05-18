@@ -1,7 +1,5 @@
-angular.module('awesome-shop')
-.controller('productCtrl', ['$scope','findProductByID', function($scope, findProductByID){
+app.controller('productCtrl', ['$scope','shoppingCart','findProductByID',function($scope, shoppingCart, findProductByID){
   $scope.productItem = findProductByID.findProduct();
-
-  console.log($scope.productItem);
+  $scope.productCart = shoppingCart;
 
 }]);

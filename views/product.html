@@ -1,11 +1,29 @@
 <div class="row">
   <h1>{{productItem.name}}</h1>
   <div class="col-sm-3">
-    <div class="text-center product-img" ng-repeat="image in productItem.imgs">
-      <img ng-src="{{image}}" alt="{{productItem.name}}" class="img-circle text-center grid-img">
+    <div id="Carousel" class="carousel slide">
+      <ol class="carousel-indicators">
+          <li data-target="Carousel" data-slide-to="0" class="active"></li>
+          <li data-target="Carousel" data-slide-to="1"></li>
+          <li data-target="Carousel" data-slide-to="2"></li>
+      </ol>
+      <!--image section-->
+      <div class="carousel-inner">
+        <div class="item" ng-class="{active : $index == 0}" ng-repeat="image in productItem.imgs">
+          <img ng-src="{{image}}" alt="{{productItem.name}}" class="text-center img-responsive product-img">
+        </div>
+      </div>
+      <span class="left carousel-control" data-target="#Carousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+      </span>
+      <span class="right carousel-control" data-target="#Carousel" data-slide="next">
+         <span class="glyphicon glyphicon-chevron-right"></span>
+      </span>
     </div>
   </div>
   <div class="col-sm-9">
-    <p>{{productItem.shortDes}}</p>
+    <p>{{productItem.longDes}}</p>
+    <p>{{productItem.price | currency}}</p>
+    <a href class="btn btn-default" ng-click="productCart.addItem(productItem,1)">Add to cart</a>
   </div>
 </div>

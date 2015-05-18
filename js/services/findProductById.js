@@ -1,5 +1,4 @@
-angular.module('awesome-shop')
-.service('findProductByID', ['$location', 'inventory', function($location, inventory){
+app.service('findProductByID', ['$location', 'inventory', function($location, inventory){
   this.findProduct = function(){
     //uses location to grab path and split results based on the number of '/'
     var ID = $location.path().split('/');

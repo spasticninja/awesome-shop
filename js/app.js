@@ -1,7 +1,8 @@
 'use strict';
 
-angular.module('awesome-shop', ['ngRoute'])
-.config(['$routeProvider', function($routeProvider){
+var app = angular.module('awesome-shop', ['ngRoute', 'angular-carousel']);
+
+app.config(['$routeProvider', function($routeProvider){
   $routeProvider
   .when('/', {
     templateUrl: 'views/home.html',
