@@ -6,8 +6,8 @@ angular.module('awesome-shop', ['ngRoute'])
   .when('/', {
     templateUrl: 'views/home.html',
     controller: 'homeCtrl'
-  }).when('/store', {
-    templateUrl: 'views/store.html',
+  }).when('/shop', {
+    templateUrl: 'views/shop.html',
     controller: 'storeCtrl'
   }).when('/product/:productID', {
     templateUrl: 'views/product.html'

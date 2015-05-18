@@ -4,17 +4,24 @@ body,html{
   background-repeat: repeat;
   font-family: 'Lato', sans-serif;
 }
-h1,h2,h3,h4,h5{
-  font-family: 'Oswald', sans-serif;
+h1,h2,h3,h4,h5,.navbar-brand{
+  font-family: 'Bree Serif', serif;
   color:#2F637A;
 }
-
+a{
+  color:#2F637A;
+}
+a:hover{
+  color:#4CA1C6;
+}
 /************ Navbar ***************/
 .navbar{
   background-color:#fff;
+  min-height:80px;
+  padding-top:15px;
 }
 .fa.fa-shopping-cart{
-  font-size:1em;
+  font-size:1.4em;
 }
 .navbar-nav>li>a, .navbar-brand, .navbar-right>li>a{
   color:#2F637A;
@@ -22,6 +29,9 @@ h1,h2,h3,h4,h5{
 .navbar-nav>li>a:hover, .navbar-brand:hover, .navbar-right>li>a:hover{
   color:#4CA1C6;
   background-color:#fff;
+}
+.badge{
+  background-color:#2F637A;
 }
 .icon-bar{
   background-color:#2F637A;
@@ -31,7 +41,14 @@ h1,h2,h3,h4,h5{
   border-color:#2F637A;
   border-radius:0px;
 }
-
+.banner{
+  background-color:#2F637A;
+  color:#97C6DB;
+}
+.banner p{
+  margin:5px;
+  padding:0px;
+}
 /************* Store View *************/
 .list-view{
   list-style-type: none;
@@ -61,4 +78,32 @@ h1,h2,h3,h4,h5{
   min-width:250px;
   object-fit:cover;
   overflow:hidden;
+}
+/********** Footer ************/
+.footer{
+  background-color:#2F637A;
+  padding-top:10px;
+  padding-bottom:20px;
+}
+.footer h2, .footer h3, .footer h4, .footer a:hover, .footer p{
+  color:#97C6DB;
+}
+.footer a{
+  color:#eee;
+}
+ul.footer-menu{
+  list-style-type:none;
+  padding-left:0px;
+}
+.payment-options{
+  padding-top:50px;
+  color:#97C6DB;
+  font-size:2.5em;
+}
+.credits{
+  background-color:#fff;
+}
+.attribute{
+  padding-top:10px;
+  font-size:0.8em;
 }

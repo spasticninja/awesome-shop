@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="awesome-shop">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Awesome Shop</title>
@@ -8,11 +8,18 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css">
   <link href="bower_components/angular-carousel/dist/angular-carousel.min.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" type="text/css">
-  <link href='http://fonts.googleapis.com/css?family=Lato|Oswald' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato|Bree+Serif' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css" type="text/css">
 
 </head>
-<body>
+<body ng-app="awesome-shop">
+
+  <!-- Announcement Bar -->
+  <div class="banner">
+    <div class="container-fluid text-center">
+      <p>25% off and free shipping! Only through 5/25!</p>
+    </div>
+  </div>
 
   <!-- Navbar -->
   <nav class="navbar navbar-static-top">
@@ -31,20 +38,59 @@
       <!-- Menu -->
       <div class="collapse navbar-collapse" id="shop-nav" ng-controller="mainCtrl">
         <ul class="nav navbar-nav">
-          <li><a href="#/store">Store</a></li>
+          <li><a href="#/shop">Shop</a></li>
           <li><a href="https://github.com/eladrin201">Github</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#/cart"><i class="fa fa-shopping-cart"></i></a></li>
-          <li><a href><span class="badge">{{shopDetails.totalItems()}}</span></a></li>
+          <li><a href="#/cart"><i class="fa fa-shopping-cart"></i> <span class="badge">{{shopDetails.totalItems()}}</span></a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Views & Content -->
-  <div class="container content" ng-view>
 
+  <!-- Views & Content -->
+  <div class="container content" ng-view></div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="container">
+      <div class="col-md-4">
+        <div class="col-sm-6">
+          <h3>Navigate</h3>
+          <ul class="footer-menu">
+            <li><a href="#/">Home</a></li>
+            <li><a href="#/shop">Shop</a></li>
+            <li><a href="#/cart">Cart</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6">
+          <h3>Follow us</h3>
+          <ul class="footer-menu">
+            <li><a href><i class="fa fa-facebook-official"></i> Facebook</a></li>
+            <li><a href><i class="fa fa-twitter"></i> Twitter</a></li>
+            <li><a href><i class="fa fa-google-plus"></i> Google+</a></li>
+            <li><a href><i class="fa fa-pinterest"></i> Pintrest</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h3>About</h3>
+        <p>A simple ecommerce store built with <i class="fa fa-heart"></i> in Angular.</p>
+        <p>Check out the project on <i class="fa fa-github"></i>!</p>
+      </div>
+      <div class="col-md-4">
+        <div class="payment-options text-right">
+          <i class="fa fa-cc-visa"></i> <i class="fa fa-cc-mastercard"></i> <i class="fa fa-cc-discover"></i> <i class="fa fa-cc-amex"></i> <i class="fa fa-cc-paypal"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="credits">
+    <div class="container-fluid">
+      <p class="attribute">&copy; 2015 Allison Betancourt | Shop photos credit: <a href="http://www.thinkgeek.com/" target="_blank">ThinkGeek</a>. </p>
+    </div>
   </div>
 
   <!-- All the libraries!! -->
