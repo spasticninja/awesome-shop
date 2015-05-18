@@ -1,4 +1,6 @@
 angular.module('awesome-shop').directive('listDisplay', function(){
+  
+
   return {
     restrict: 'E',
     replace: true,

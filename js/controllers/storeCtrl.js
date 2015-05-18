@@ -11,22 +11,7 @@ angular.module('awesome-shop')
   $scope.currentPage = 0;
   $scope.itemsPerPage = 10; //number of listings per page.
 
-  $scope.range = function() {
-    //rangeSize is the number of pages (in numerical form) displayed in the pagination.
-    var rangeSize = 3; //This should be an odd number.
-    var ret = [];
-    var start;
-
-    start = $scope.currentPage;
-    if ( start > $scope.pageCount()-rangeSize ) {
-      start = $scope.pageCount()-rangeSize+1;
-    }
-
-    for (var i=start; i<start+rangeSize; i++) {
-      ret.push(i);
-    }
-    return ret;
-  };
+  //pagination
   $scope.prevPage = function(){
     if($scope.currentPage > 0){
       $scope.currentPage--;
@@ -58,6 +43,15 @@ angular.module('awesome-shop')
   };
   $scope.setPage = function(set){
     $scope.currentPage = set;
+  };
+
+  //list vs gridview
+  $scope.view = 1;
+  $scope.selectView = function(setView){
+    $scope.view = setView;
+  };
+  $scope.isSelected = function(checkView){
+    return $scope.view === checkView;
   };
 
 }]);

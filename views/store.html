@@ -4,14 +4,19 @@
       <h1>Store</h1>
     </div>
     <div class="col-md-3 col-md-4 text-right">
-      <a href="" class="btn btn-default active"><i class="fa fa-list"></i></a>
-      <a href="" class="btn btn-default"><i class="fa fa-th"></i></a>
+      <a href ng-click="view = true" ng-class="{active : view}" class="btn btn-default"><i class="fa fa-th"></i></a>
+      <a href ng-click="view = false" ng-class="{active : !view}" class="btn btn-default"><i class="fa fa-list"></i></a>
     </div>
   </div>
 
-
-
-  <list-display></list-display>
+  <div class="row" style="margin:auto;">
+    <div ng-show="view">
+      <grid-display></grid-display>
+    </div>
+    <div ng-hide="view">
+      <list-display></list-display>
+    </div>
+  </div>
 
   <!--pagination buttons -->
   <div class="row text-center">

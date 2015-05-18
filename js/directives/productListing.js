@@ -1,10 +1,11 @@
-angular.module('awesome-shop').directive('productListing', function(){
+angular.module('awesome-shop').directive('productListing', ['shoppingCart', function(shoppingCart){
+
   return {
     restrict: 'E',
     replace: true,
     scope: {
-      movie: '=movie'
+      product: '=shoppingCart.items.id'
     },
     templateUrl: 'views/partials/productDetails.html'
   };
-});
+}]);

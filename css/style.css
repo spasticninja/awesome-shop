@@ -38,8 +38,8 @@ h1,h2,h3,h4,h5{
   padding-left:0px;
 }
 .list-img{
-  height:auto;
-  max-width:200px;
+  max-height:250px;
+  min-width:250px;
   object-fit:cover;
   overflow:hidden;
   text-align:center;
@@ -47,4 +47,18 @@ h1,h2,h3,h4,h5{
   margin-bottom:15px;
   margin-left:auto;
   margin-right:auto;
+}
+
+.grid-view{
+  display:inline-block;
+  float:left;
+  width:350px;
+  height: 400px;
+  margin:15px;
+}
+.grid-img{
+  max-height:250px;
+  min-width:250px;
+  object-fit:cover;
+  overflow:hidden;
 }

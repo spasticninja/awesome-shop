@@ -1,0 +1,7 @@
+<div ng-repeat="item in inventory | offset: currentPage*itemsPerPage | limitTo: itemsPerPage" class="grid-view text-center">
+  <img ng-src="{{item.imgs[0]}}" alt="{{item.name}}" class="img-circle text-center grid-img">
+  <h4 class="text-center">{{item.name}}</h2>
+  <p class="text-center">{{item.price | currency}}</p>
+  <a href="/product/{{item.id}}" class="btn btn-default">Read more</a>
+  <a href class="btn btn-default" ng-click="cart.addItem(item,1)">Add to cart</a>
+</div>
