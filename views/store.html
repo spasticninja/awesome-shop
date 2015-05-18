@@ -1,22 +1,17 @@
 <div class="container" id="content">
-  <h1>Store</h1>
+  <div class="row">
+    <div class="col-md-9 col-sm-8">
+      <h1>Store</h1>
+    </div>
+    <div class="col-md-3 col-md-4 text-right">
+      <a href="" class="btn btn-default active"><i class="fa fa-list"></i></a>
+      <a href="" class="btn btn-default"><i class="fa fa-th"></i></a>
+    </div>
+  </div>
 
-  <!--List view of information-->
-  <ul class="list-view">
-    <li ng-repeat="item in inventory | offset: currentPage*itemsPerPage | limitTo: itemsPerPage">
-      <div class="row">
-        <div class="col-sm-3">
-          <img ng-src="{{item.imgs[0]}}" alt="{{item.name}}" class="text-center img-responsive">
-        </div>
-        <div class="col-sm-9">
-          <h2>{{item.name}}</h2>
-          <p>{{item.shortDes}}</p>
-          <a href="/product/{{item.id}}" class="btn btn-default">Read more</a>
-          <a href class="btn btn-default" ng-click="cart.addItem(item,1)">Add to cart</a>
-        </div>
-      </div>
-    </li>
-  </ul>
+
+
+  <list-display></list-display>
 
   <!--pagination buttons -->
   <div class="row text-center">
