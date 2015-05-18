@@ -4,7 +4,6 @@ angular.module('awesome-shop').service('shoppingCart', [function(){
 
   //adds item to cart
   this.addItem = function(item, amt){
-    console.log('adding item to cart', item, this.items);
     var itemExists = false;
     var key = 0;
 
