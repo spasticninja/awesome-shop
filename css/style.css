@@ -43,11 +43,21 @@ a:hover{
 }
 .banner{
   background-color:#2F637A;
-  color:#97C6DB;
+  color:#9BCDE3;
 }
 .banner p{
   margin:5px;
   padding:0px;
+}
+.btn-awesome{
+  color: #eee;
+  background-color: #4CA1C6;
+  border-color: #2F637A;
+}
+.btn-awesome:hover{
+  color: #4CA1C6;
+  background-color: #2F637A;
+  border-color: #2F637A;
 }
 /************* Store View *************/
 .list-view{
@@ -94,22 +104,40 @@ a:hover{
   -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
+/********** Home Page ************/
+.home-banner{
+  background-color:rgba(0,0,0,0.6);
+  height:300px;
+}
+.home-banner h1{
+  padding-top:230px;
+  color:#fff;
+}
+.home-text{
+  background-color:#fff;
+  padding:20px;
+}
+.home-img{
+  max-height:300px;
+  margin:auto;
+}
 /********** Product Page ************/
 .product-img{
   max-height:250px;
   margin:auto;
-}
-#Carousel{
-  margin-bottom:30px;
 }
 /********** Footer ************/
 .footer{
   background-color:#2F637A;
   padding-top:10px;
   padding-bottom:20px;
+  margin-top:30px;
 }
-.footer h2, .footer h3, .footer h4, .footer a:hover, .footer p{
-  color:#97C6DB;
+.footer h2, .footer h3, .footer h4, .footer a:hover{
+  color:#BDBDBD;
+}
+.footer p{
+  color:#9BCDE3;
 }
 .footer a{
   color:#eee;
@@ -120,7 +148,7 @@ ul.footer-menu{
 }
 .payment-options{
   padding-top:50px;
-  color:#97C6DB;
+  color:#9BCDE3;
   font-size:2.5em;
 }
 .credits{

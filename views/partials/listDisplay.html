@@ -1,15 +1,19 @@
 <ul class="list-view">
   <li ng-repeat="item in inventory | search:searchStore | offset: currentPage*itemsPerPage | limitTo: itemsPerPage">
+    <!-- pagination and search are done through the filter above -->
+
+    <!--List layout-->
     <div class="row">
       <div class="col-sm-3">
-        <a href="/product/{{item.id}}"><img ng-src="{{item.imgs[0]}}" alt="{{item.name}}" class="text-center img-responsive list-img"></a>
+        <a href="#/product/{{item.id}}"><img ng-src="{{item.imgs[0]}}" alt="{{item.name}}" class="text-center img-responsive list-img"></a>
       </div>
       <div class="col-sm-9">
+        <!--product description, links, and price -->
         <h2><a href="/product/{{item.id}}">{{item.name}}</a></h2>
         <p>{{item.shortDes}}</p>
-        <p><a href="/product/{{item.id}}">{{item.price | currency}}</a></p>
-        <a href="/product/{{item.id}}" class="btn btn-default">Read more</a>
-        <a href class="btn btn-default" ng-click="cart.addItem(item,1)">Add to cart</a>
+        <p><a href="#/product/{{item.id}}">{{item.price | currency}}</a></p>
+        <a href="#/product/{{item.id}}" class="btn btn-awesome">Read more</a>
+        <a href class="btn btn-default" ng-click="cart.addItem(item,1); toggle = true" ng-model="text"><span ng-hide="toggle">Add to cart</span><span ng-show="toggle" style="color:#4CA1C6">Already in cart</span></a>
       </div>
     </div>
   </li>

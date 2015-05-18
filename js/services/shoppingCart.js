@@ -1,6 +1,6 @@
 angular.module('awesome-shop').service('shoppingCart', [function(){
   this.items =[];
-  this.newCart = [];
+  this.newCart = []; //an empty cart for clearing the cart
 
   //adds item to cart
   this.addItem = function(item, amt){
@@ -50,7 +50,7 @@ angular.module('awesome-shop').service('shoppingCart', [function(){
     this.items = this.newCart;
   }
 
-  //counts all the items in the cart via quantity 
+  //counts all the items in the cart via quantity
   this.totalItems = function(){
     var tItems = 0;
 
@@ -60,5 +60,6 @@ angular.module('awesome-shop').service('shoppingCart', [function(){
 
     return tItems;
   }
+
 
 }]);

@@ -1,12 +1,13 @@
-<div class="row">
+<div class="container">
   <h1>{{productItem.name}}</h1>
   <div class="col-sm-3">
-    <!--Carousel-->
+    <!--Carousel of all images from product-->
     <div id="Carousel" class="carousel slide">
       <ol class="carousel-indicators">
           <li data-target="Carousel" data-slide-to="0" class="active"></li>
           <li data-target="Carousel" data-slide-to="1" ng-show="productItem.imgs[1]"></li>
           <li data-target="Carousel" data-slide-to="2" ng-show="productItem.imgs[2]"></li>
+          <!-- there is a maximum of three images per item so I cheated. In the future, I'd like to incororate a proper angular carousel-->
       </ol>
       <!--image section-->
       <div class="carousel-inner">
@@ -28,6 +29,7 @@
     <p>{{productItem.shortDes}}</p>
     <p>{{productItem.longDes}}</p>
     <p>{{productItem.price | currency}}</p>
-    <a href class="btn btn-default" ng-click="productCart.addItem(productItem,1)">Add to cart</a>
+    <a href class="btn btn-default" ng-click="productCart.addItem(productItem,1); toggle = true"><span ng-hide="toggle">Add to cart</span><span ng-show="toggle" style="color:#4CA1C6">Already in cart</span></a>
+    <a href="#/cart" class="btn btn-default">Go to Cart</a>
   </div>
 </div>

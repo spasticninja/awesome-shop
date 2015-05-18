@@ -1,8 +1,8 @@
-angular.module('awesome-shop').constant('inventory', [{
+angular.module('awesome-shop').constant('inventory', [{ //inventory made as a constant
   id: 0001001,
   item: 'Teeshirt',
   type: 'Unisex',
-  name: 'Starfleet Fencing Teeshirt',
+  name: 'Mass Effect Teeshirt',
   imgs: [
     'images/items/unisex-tee-n7-1.jpg',
     'images/items/unisex-tee-n7-2.jpg',
@@ -50,7 +50,7 @@ angular.module('awesome-shop').constant('inventory', [{
   id: 0001005,
   item: 'Teeshirt',
   type: 'Unisex',
-  name: 'Exclusive Starfleet Academy Fencing Club Teeshirt',
+  name: 'Starfleet Academy Fencing Club Teeshirt',
   imgs: [
     'images/items/unisex-tee-starfleet-fencing-1.jpg',
     'images/items/unisex-tee-starfleet-fencing-2.jpg'
@@ -62,7 +62,7 @@ angular.module('awesome-shop').constant('inventory', [{
   id: 0001006,
   item: 'Teeshirt',
   type: 'Unisex',
-  name: 'Exclusive Nova Squadron Teeshirt',
+  name: 'Nova Squadron Teeshirt',
   imgs: [
     'images/items/unisex-tee-nova-squadron-1.jpg',
     'images/items/unisex-tee-nova-squadron-2.jpg'
@@ -128,7 +128,7 @@ angular.module('awesome-shop').constant('inventory', [{
     'images/items/ladies-vneck-harrypotter-v1-2.jpg'
   ],
   shortDes: 'If we made a list of schools we wish we could attend, Hogwarts would be at the top of our list. This shirt lets us pretend a bit.',
-  longDes: '<p>Hogwarts crest (relaxed version) on a black, 100% cotton ladies\' v-neck shirt (with white stripes on the sleeves). Machine wash cold. Tumble dry low or lay flat to dry. Imported.</p>',
+  longDes: 'Hogwarts crest (relaxed version) on a black, 100% cotton ladies\' v-neck shirt (with white stripes on the sleeves). Machine wash cold. Tumble dry low or lay flat to dry. Imported.',
   price: 19.99
 },{
   id: 0003002,
@@ -140,6 +140,6 @@ angular.module('awesome-shop').constant('inventory', [{
     'images/items/ladies-vneck-harrypotter-v2-2.jpg'
   ],
   shortDes: 'The Marauder\'s Map is a thing of beauty. And now, just so you never forget, you can wear a shirt with the phrase needed to reveal its secrets.',
-  longDes: '<p>This shirt is not the Marauder\'s Map. This shirt does not have a Homonculous Charm cast on it. This shirt is only a reminder of what to say to get the Marauder\'s Map to show off its magical bounty. And if you\'re like us, each time you put the shirt on, you\'ll tap it with your wand and say, "I solemnly swear that I am up to no good." And then, when you take it off, you\'ll whisper, "Mischief managed."</p> <p>Please Note: We\'re not sure how this shirt will react in the presence of Severus Snape. You have been warned.</p> <p>"I solemnly swear that I am up to no good" and "Harry Potter" on a black, 100% cotton, ladies\' v-neck shirt. Shirt also features white stripes on the sleeve and a white, ringer-style neck hole. Machine wash cold. Tumble dry low or lay flat to dry. Imported.</p>',
+  longDes: 'This shirt is not the Marauder\'s Map. This shirt does not have a Homonculous Charm cast on it. This shirt is only a reminder of what to say to get the Marauder\'s Map to show off its magical bounty. And if you\'re like us, each time you put the shirt on, you\'ll tap it with your wand and say, "I solemnly swear that I am up to no good." And then, when you take it off, you\'ll whisper, "Mischief managed." Please Note: We\'re not sure how this shirt will react in the presence of Severus Snape. You have been warned. "I solemnly swear that I am up to no good" and "Harry Potter" on a black, 100% cotton, ladies\' v-neck shirt. Shirt also features white stripes on the sleeve and a white, ringer-style neck hole. Machine wash cold. Tumble dry low or lay flat to dry. Imported.',
   price: 14.99
 }]);

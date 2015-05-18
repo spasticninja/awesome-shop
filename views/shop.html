@@ -5,6 +5,7 @@
       <p>A good shirt awaits...</p>
 
     </div>
+    <!--search box and toggle buttons (between list and grid views)-->
     <div class="col-md-4 text-right">
       <input type="text" placeholder="Search..." ng-model="searchStore" class="search-form">
       <a href ng-click="view = true" ng-class="{active : view}" class="btn btn-default"><i class="fa fa-th"></i></a>
@@ -12,6 +13,7 @@
     </div>
   </div>
 
+  <!--toggle displays-->
   <div class="row" style="margin:auto;">
     <div ng-show="view">
       <grid-display></grid-display>

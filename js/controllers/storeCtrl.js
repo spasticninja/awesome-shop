@@ -28,10 +28,11 @@ angular.module('awesome-shop')
 .controller('storeCtrl', ['$scope', 'inventory', 'shoppingCart', function($scope, inventory, shoppingCart){
   $scope.inventory = inventory;
   $scope.cart = shoppingCart;
+
+  //Pagination start
   $scope.currentPage = 0;
   $scope.itemsPerPage = 10; //number of listings per page.
 
-  //pagination
   $scope.prevPage = function(){
     if($scope.currentPage > 0){
       $scope.currentPage--;
@@ -65,7 +66,7 @@ angular.module('awesome-shop')
     $scope.currentPage = set;
   };
 
-  //list vs gridview
+  //list vs gridview logic
   $scope.view = 1;
   $scope.selectView = function(setView){
     $scope.view = setView;
