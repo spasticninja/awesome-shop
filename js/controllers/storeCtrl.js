@@ -1,9 +1,29 @@
 angular.module('awesome-shop')
 .filter('offset', function(){
+  //pagination filter
   return function(input,start){
     start = parseInt(start,10);
     return input.slice(start);
   };
+})
+.filter('search', function(){
+  //search filter
+  return function(input,searchStore){
+    if(!searchStore){
+      return input;
+    }else{
+      var result = [];
+      searchStore = searchStore.toLowerCase();
+
+      angular.forEach(input, function(it){
+        if(it.name.toLowerCase().indexOf(searchStore) !== -1){
+          result.push(it);
+        }
+      });
+      return result;
+    }
+  }
+
 })
 .controller('storeCtrl', ['$scope', 'inventory', 'shoppingCart', function($scope, inventory, shoppingCart){
   $scope.inventory = inventory;

@@ -1,5 +1,5 @@
 <ul class="list-view">
-  <li ng-repeat="item in inventory | offset: currentPage*itemsPerPage | limitTo: itemsPerPage">
+  <li ng-repeat="item in inventory | search:searchStore | offset: currentPage*itemsPerPage | limitTo: itemsPerPage">
     <div class="row">
       <div class="col-sm-3">
         <img ng-src="{{item.imgs[0]}}" alt="{{item.name}}" class="text-center img-responsive list-img">
