@@ -59,13 +59,11 @@ a:hover{
   min-width:250px;
   object-fit:cover;
   overflow:hidden;
-  text-align:center;
   margin-top:15px;
   margin-bottom:15px;
   margin-left:auto;
   margin-right:auto;
 }
-
 .grid-view{
   display:inline-block;
   float:left;
@@ -78,6 +76,7 @@ a:hover{
   min-width:250px;
   object-fit:cover;
   overflow:hidden;
+  margin:auto;
 }
 .search-form{
   height: 34px;

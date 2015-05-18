@@ -1,7 +1,7 @@
-<div ng-repeat="item in inventory | search:searchStore | offset: currentPage*itemsPerPage | limitTo: itemsPerPage" class="grid-view">
-  <img ng-src="{{item.imgs[0]}}" alt="{{item.name}}" class="img-circle text-center grid-img">
-  <h4 class="text-center">{{item.name}}</h2>
-  <p class="text-center">{{item.price | currency}}</p>
-  <a href="/product/{{item.id}}" class="btn btn-default">Read more</a>
+<div ng-repeat="item in inventory | search:searchStore | offset: currentPage*itemsPerPage | limitTo: itemsPerPage" class="grid-view" style="text-align:center;">
+  <a href="#/product/{{item.id}}"><img ng-src="{{item.imgs[0]}}" alt="{{item.name}}" class="img-circle text-center grid-img"></a>
+  <h4 class="text-center"><a href="#/product/{{item.id}}">{{item.name}}</a></h2>
+  <p class="text-center"><a href="#/product/{{item.id}}">{{item.price | currency}}</a></p>
+  <a href="#/product/{{item.id}}" class="btn btn-default">Read more</a>
   <a href class="btn btn-default" ng-click="cart.addItem(item,1)">Add to cart</a>
 </div>
