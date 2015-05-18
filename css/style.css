@@ -99,7 +99,9 @@ a:hover{
   max-height:250px;
   margin:auto;
 }
-
+#Carousel{
+  margin-bottom:30px;
+}
 /********** Footer ************/
 .footer{
   background-color:#2F637A;
