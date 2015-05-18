@@ -1,6 +1,7 @@
 body,html{
   /* Background pattern from subtlepatterns.com */
-  background-image: url('/images/wavegrid/wavegrid.png');
+  background-image: url('../images/wavegrid/wavegrid.png');
+  background-color:#eee;
   background-repeat: repeat;
   font-family: 'Lato', sans-serif;
 }
@@ -19,6 +20,9 @@ a:hover{
   background-color:#fff;
   min-height:80px;
   padding-top:15px;
+  -webkit-box-shadow: 0px 1px 13px -4px rgba(0,0,0,0.61);
+  -moz-box-shadow: 0px 1px 13px -4px rgba(0,0,0,0.61);
+  box-shadow: 0px 1px 13px -4px rgba(0,0,0,0.61);
 }
 .fa.fa-shopping-cart{
   font-size:1.4em;
@@ -132,6 +136,9 @@ a:hover{
   padding-top:10px;
   padding-bottom:20px;
   margin-top:30px;
+  -webkit-box-shadow: 0px 1px 13px -4px rgba(0,0,0,0.61);
+  -moz-box-shadow: 0px 1px 13px -4px rgba(0,0,0,0.61);
+  box-shadow: 0px 1px 13px -4px rgba(0,0,0,0.61);
 }
 .footer h2, .footer h3, .footer h4, .footer a:hover{
   color:#BDBDBD;
